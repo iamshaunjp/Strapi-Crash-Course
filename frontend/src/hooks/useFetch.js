@@ -11,9 +11,9 @@ const useFetch = (url) => {
       
       try {
         const res = await fetch(url)
-        const reviews = await res.json()
+        const json = await res.json()
 
-        setData({ reviews });
+        setData(json);
         setLoading(false)
       } catch (error) {
         setError(error)
