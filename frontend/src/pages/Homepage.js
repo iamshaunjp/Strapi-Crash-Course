@@ -12,7 +12,7 @@ export default function Homepage() {
 
   return (
     <div>
-      {data.reviews.map(review => (
+      {data.map(review => (
         <div key={review.id} className="review-card">
           <div className="rating">{review.rating}</div>
           <h2>{review.title}</h2>
