@@ -27,3 +27,29 @@ a {
   padding-bottom: 10px;
   border-bottom: 2px solid;
 }
+
+/* review list */
+.review-card {
+  background: white;
+  margin: 60px auto;
+  padding: 1px 20px 20px 90px;
+  position: relative;
+}
+.review-card .rating {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  background: #8e2ad6;
+  font-size: 3em;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  color: white;
+}
+.review-card h2 {
+  margin-bottom: 0;
+}
+.review-card small {
+  margin-right: 10px;
+  color: #777;
+}
