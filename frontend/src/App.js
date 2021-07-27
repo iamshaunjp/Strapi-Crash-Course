@@ -26,7 +26,7 @@ function App() {
             <Route path="/details/:id">
               <ReviewDetails />
             </Route>
-            <Route path="/category/:id">
+            <Route path="/categories/:id">
               <Category />
             </Route>
           </Switch>
