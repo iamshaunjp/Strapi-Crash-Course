@@ -3,23 +3,22 @@ import useFetch from '../hooks/useFetch'
 import { Link } from 'react-router-dom'
 
 export default function Homepage() {
-  const { loading, error, data } = useFetch('http://localhost:1337/reviews')
+  const { loading, error, data } = useFetch('http://localhost:1337/api/reviews')
+  //console.log(data);
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
 
-  console.log(data)
-
   return (
     <div>
-      {data.map(review => (
+      {data.map((review) => (
         <div key={review.id} className="review-card">
-          <div className="rating">{review.rating}</div>
-          <h2>{review.title}</h2>
-          
+          <div className="rating">{review.attributes.rating}</div>
+          <h2>{review.attributes.title}</h2>
+
           <small>console list</small>
 
-          <p>{review.body.substring(0, 200)}...</p>
+          <p>{review.attributes.body.substring(0, 200)}...</p>
           <Link to={`/details/${review.id}`}>Read more</Link>
         </div>
       ))}
